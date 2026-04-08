@@ -1,0 +1,82 @@
+gcc800 -O3 -D NDEBUG -std=gnu99 test/testheapmgr.c src/heapmgr2.c src/chunk.c -o test/testheapmgr2
+       Executable          Test   Count   Size Time_m Time_f   Time        Mem
+==============================================================================
+ ./testheapmgrgnu    LIFO_fixed   50000   1000   0.09   0.00   0.09   50282496
+ ./testheapmgrgnu    FIFO_fixed   50000   1000   0.08   0.02   0.09       8192
+ ./testheapmgrgnu   LIFO_random   50000   1000   0.05   0.01   0.05   25681920
+ ./testheapmgrgnu   FIFO_random   50000   1000   0.05   0.01   0.06   25681920
+ ./testheapmgrgnu  random_fixed   50000   1000      -      -   0.05   10743808
+ ./testheapmgrgnu random_random   50000   1000      -      -   0.02    8110080
+ ./testheapmgrgnu         worst   50000   1000      -      -   0.03   13651968
+==============================================================================
+ ./testheapmgrgnu    LIFO_fixed   30000  10000   0.24   0.54   0.79       4096
+ ./testheapmgrgnu    FIFO_fixed   30000  10000   0.19   0.04   0.23       4096
+ ./testheapmgrgnu   LIFO_random   30000  10000   0.14   0.00   0.15  150515712
+ ./testheapmgrgnu   FIFO_random   30000  10000   0.16   0.02   0.18   48517120
+ ./testheapmgrgnu  random_fixed   30000  10000      -      -   0.08       4096
+ ./testheapmgrgnu random_random   30000  10000      -      -   0.05   47271936
+ ./testheapmgrgnu         worst   30000  10000      -      -   0.08   75612160
+==============================================================================
+  ./testheapmgrkr    LIFO_fixed   50000   1000   0.09   0.00   0.09   51200000
+  ./testheapmgrkr    FIFO_fixed   50000   1000   0.09   0.00   0.09   51200000
+  ./testheapmgrkr   LIFO_random   50000   1000   0.07   0.02   0.09   26296320
+  ./testheapmgrkr   FIFO_random   50000   1000   0.08   0.01   0.09   26296320
+  ./testheapmgrkr  random_fixed   50000   1000      -      -   0.91   16171008
+  ./testheapmgrkr random_random   50000   1000      -      -   0.53    8273920
+  ./testheapmgrkr         worst   50000   1000      -      -   1.94   14139392
+==============================================================================
+  ./testheapmgrkr    LIFO_fixed   30000  10000   7.34   5.03  12.37  491520000
+  ./testheapmgrkr    FIFO_fixed   30000  10000   7.31   0.00   7.31  491520000
+  ./testheapmgrkr   LIFO_random   30000  10000   1.00   0.57   1.57  157827072
+  ./testheapmgrkr   FIFO_random   30000  10000   1.02   0.28   1.29  157827072
+  ./testheapmgrkr  random_fixed   30000  10000      -      -   4.20  111247360
+  ./testheapmgrkr random_random   30000  10000      -      -   2.01   49332224
+  ./testheapmgrkr         worst   30000  10000      -      -   6.20  103743488
+==============================================================================
+./testheapmgrbase    LIFO_fixed   50000   1000   0.94   0.56   1.50   51250000
+./testheapmgrbase    FIFO_fixed   50000   1000   0.96   0.00   0.96   51250000
+./testheapmgrbase   LIFO_random   50000   1000   0.19   0.12   0.31   26174400
+./testheapmgrbase   FIFO_random   50000   1000   0.19   0.00   0.19   26174400
+./testheapmgrbase  random_fixed   50000   1000      -      -   1.01   16186800
+./testheapmgrbase random_random   50000   1000      -      -   0.40    8282000
+./testheapmgrbase         worst   50000   1000      -      -   2.70   13940000
+==============================================================================
+./testheapmgrbase    LIFO_fixed   30000  10000   6.77   4.38  11.15  492000000
+./testheapmgrbase    FIFO_fixed   30000  10000   6.76   0.00   6.76  492000000
+./testheapmgrbase   LIFO_random   30000  10000   2.42   1.61   4.03  152208400
+./testheapmgrbase   FIFO_random   30000  10000   2.27   0.30   2.57  152208400
+./testheapmgrbase  random_fixed   30000  10000      -      -   4.21  110929600
+./testheapmgrbase random_random   30000  10000      -      -   1.71   48150400
+./testheapmgrbase         worst   30000  10000      -      -   1.11  103369200
+==============================================================================
+   ./testheapmgr1    LIFO_fixed   50000   1000   0.10   0.01   0.11   51200000
+   ./testheapmgr1    FIFO_fixed   50000   1000   0.11   0.00   0.12   51200000
+   ./testheapmgr1   LIFO_random   50000   1000   0.10   0.01   0.11   26361856
+   ./testheapmgr1   FIFO_random   50000   1000   0.11   0.01   0.12   26361856
+   ./testheapmgr1  random_fixed   50000   1000      -      -   0.05   16171008
+   ./testheapmgr1 random_random   50000   1000      -      -   0.03    8306688
+   ./testheapmgr1         worst   50000   1000      -      -   3.32   14139392
+==============================================================================
+   ./testheapmgr1    LIFO_fixed   30000  10000   9.05   0.00   9.05  491520000
+   ./testheapmgr1    FIFO_fixed   30000  10000   8.64   0.00   8.64  491520000
+   ./testheapmgr1   LIFO_random   30000  10000   3.22   0.00   3.22  162004992
+   ./testheapmgr1   FIFO_random   30000  10000   3.11   0.01   3.12  162004992
+   ./testheapmgr1  random_fixed   30000  10000      -      -   1.18  110903296
+   ./testheapmgr1 random_random   30000  10000      -      -   0.38   50151424
+   ./testheapmgr1         worst   30000  10000      -      -   3.78  103743488
+==============================================================================
+   ./testheapmgr2    LIFO_fixed   50000   1000   0.10   0.00   0.10   51200000
+   ./testheapmgr2    FIFO_fixed   50000   1000   0.10   0.00   0.11   51200000
+   ./testheapmgr2   LIFO_random   50000   1000   0.06   0.01   0.07   26181632
+   ./testheapmgr2   FIFO_random   50000   1000   0.06   0.01   0.06   26181632
+   ./testheapmgr2  random_fixed   50000   1000      -      -   0.05   16171008
+   ./testheapmgr2 random_random   50000   1000      -      -   0.03    8273920
+   ./testheapmgr2         worst   50000   1000      -      -   0.70   13926400
+==============================================================================
+   ./testheapmgr2    LIFO_fixed   30000  10000   1.05   0.01   1.06  491520000
+   ./testheapmgr2    FIFO_fixed   30000  10000   0.79   0.00   0.79  491520000
+   ./testheapmgr2   LIFO_random   30000  10000   0.31   0.00   0.31  153993216
+   ./testheapmgr2   FIFO_random   30000  10000   0.30   0.01   0.31  153993216
+   ./testheapmgr2  random_fixed   30000  10000      -      -   0.31  110886912
+   ./testheapmgr2 random_random   30000  10000      -      -   0.10   48447488
+   ./testheapmgr2         worst   30000  10000      -      -   0.29  103301120
