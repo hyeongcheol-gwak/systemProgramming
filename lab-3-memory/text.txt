@@ -1,0 +1,15 @@
+readme.md를 읽고 src 코드들을 적절히 수정하여 과제를 해결해줘.
+
+아래의 컴파일 규격에 맞아야 해.
+gcc -Wall -Werror -ansi -pedantic -std=c99 "$@"
+
+코드는 모두 함수로 구조화 돼야 해.
+
+아래의 규격에 맞춰줘.
+1. Names: Clear and consistent style for variable and function names
+2. Comments: Each function should begin with a comment that describes what the 
+function does from the point of view of the caller
+3. Function modularity (most important): Your program should not consist of one large 
+main function, instead your program should consist of multiple small functions
+4. Line lengths: Limit line lengths in your source code to 72 characters (for better 
+readability) 
